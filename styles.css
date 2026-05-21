@@ -1,0 +1,136 @@
+@font-face {
+  font-family: "Figtree-extrabold";
+  src: url("assets/fonts/static/Figtree-ExtraBold.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Figtree-medium";
+  src: url("assets/fonts/static/Figtree-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+:root {
+  --bg-card: #ffffff;
+  --primary-text: #111111;
+  --secondary-text: #6b6b6b;
+  --box-shadow-color: #111111;
+  --bg-global: #f4d04e;
+  --accent: #f4d04e;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-global);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.card-container {
+  display: grid;
+  gap: 0.5rem;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto;
+  justify-items: center;
+  background-color: var(--bg-card);
+  max-width: 384px;
+  border-radius: 20px;
+  border: 1px solid var(--box-shadow-color);
+  box-shadow: 8px 8px 0px var(--box-shadow-color);
+  padding: 1.5rem;
+  margin: 1.5rem;
+}
+
+.card-post-image {
+  width: 100%;
+  border-radius: 12px;
+}
+
+.card-tag {
+  background-color: var(--accent);
+  width: fit-content;
+  padding: 0.25rem 0.75rem 0.25rem 0.75rem;
+  border-radius: 4px;
+}
+
+.card-tag-text {
+  margin: 0;
+  color: var(--primary-text);
+  font-family: "Figtree-extrabold", sans-serif;
+  font-size: 0.875rem;
+  line-height: 150%;
+}
+
+.date {
+  margin-top: 0.75rem;
+  color: var(--primary-text);
+  font-family: "Figtree-medium", sans-serif;
+  font-size: 0.875rem;
+  line-height: 150%;
+  width: fit-content;
+}
+
+.card-title {
+  margin-top: 0.75rem;
+  color: var(--primary-text);
+  font-family: "Figtree-extrabold", sans-serif;
+  font-size: clamp(1.25rem, 1.196rem + 0.253vw, 1.5rem);
+  line-height: 150%;
+  width: fit-content;
+}
+
+.card-title:hover {
+  color: var(--accent);
+}
+
+.card-subtitle {
+  margin-top: 0.75rem;
+  color: var(--secondary-text);
+  font-family: "Figtree-medium", sans-serif;
+  font-size: 1rem;
+  line-height: 150%;
+}
+
+.card-footer {
+  display: flex;
+  flex-direction: row;
+  gap: 0.75rem;
+  width: 100%;
+}
+
+.avatar {
+  width: 2rem;
+  height: 2rem;
+}
+
+.author-name {
+  margin: 0;
+}
+
+.attribution {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+a {
+  color: var(--primary-text);
+}
